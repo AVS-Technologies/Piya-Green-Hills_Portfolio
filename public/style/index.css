@@ -1,0 +1,162 @@
+:root{
+    --text: #FFFFFF;
+    --primary: #ECE3DD;
+    --primary2: #EBE4DE;
+    --secondary: #B46325;
+    --secondary2: #4A0000;
+    --secondary3: #402511;
+    --heading: #18181E;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 
+   ################################
+   ################# Navbar 
+   ################################  
+*/
+
+#navBar .navbar{
+    height: 13vh;
+}
+
+#navBar .navbar-brand img{
+    width: 8em;
+}
+
+#navBar .navbar>.container{
+    /* border-bottom: 1px solid #b2b1b1; */
+    padding: 20px 0;
+}
+
+#navBar .nav_links{
+    width: auto;
+    padding-right: 10px;
+}
+
+#navBar .nav_links a{
+    /* padding-left: 80px;  */
+    margin-left: 1.2rem;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    overflow: hidden;
+    white-space : nowrap;
+    color: var(--text);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    /* color: #fff; */
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 2px solid #B46325;
+}
+
+#navBar .nav_links a.active{
+    font-weight: bold;
+}
+
+/* 
+   ################################
+   ################# Home 
+   ################################  
+*/
+
+#home{
+    display: flex;
+    background-image: url("../images/home1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+    z-index: -1;
+}
+
+#home h1{
+    margin-top: 45vh;
+
+    font-size: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    z-index: 2;
+}
+
+#home p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    width: 45%;
+    z-index: 2;
+}
+
+#home button{
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    background-color: transparent;
+    border: 2px solid var(--text);
+    border-radius: 5px;
+
+    outline: none;
+    /* focus */
+}
+
+#home button:hover{
+    color: var(--secondary);
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+}
+
+/* 
+   ################################
+   ################# Gallery
+   ################################  
+*/
+
+#gallery {
+    height: 80vh;
+}
+
+#gallery .leftDiv hr{
+    margin-top: 5rem;
+    margin-left: -1rem;
+    height: 2px;
+    background-color: var(--heading);
+    color: var(--heading);
+}
+
+#gallery .rightDiv h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--heading);
+
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+#gallery .rightDiv p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--heading);
+    opacity: 0.75;
+
+    font-size: 0.9rem;
+    width: 95%;
+}
