@@ -21,22 +21,24 @@
 
     <script src="./public/index.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Map  -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarScroll">
-
-
+<body>
     <section id="navBar">
-        <nav class="navbar fixed-top navbar-expand-lg nav-max" id="navbarScroll">
+        <nav class="navbar navbar-expand-lg nav-max">
             <div class="container col-md-10">
                 <a class="navbar-brand" href="#">
-                    <img src="./public/images/LOGO.png" alt="Logo">
+                    <img src="./public/images/Logo1.png" alt="Logo">
                 </a>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav nav-pills">
+                    <ul class="navbar-nav ">
                         <li class="nav-item nav_links">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item nav_links">
                             <a class="nav-link" href="#gallery">Gallery</a>
@@ -53,6 +55,9 @@
                         <li class="nav-item nav_links">
                             <a class="nav-link" href="#contactUs">Contact Us</a>
                         </li>
+                        <li class="nav-item nav_links">
+                            <button class="brochure">Download Brochure</button>
+                        </li>
                     </ul>
 
                 </div>
@@ -61,34 +66,35 @@
         <!-- <hr /> -->
     </section>
 
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="outer" tabindex="0"
-        class="outer">
 
-        <div id="home">
-            <div class="container">
-                <h1>Luxury in it's new Avatar</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                </p>
-                <button>KNOW MORE</button>
-            </div>
+    <div id="home">
+        <div class="container">
+            <h1><span class="home_heading">Luxury</span> in it's new Avatar</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            </p>
+            <button class="brochure">DOWNLOAD BROCHURE</button>
+            <button class="know">KNOW MORE</button>
         </div>
+    </div>
 
-        <div id="gallery">
-            <div class="container-fluid">
-                <div class="row g-5">
-                    <div class="col-md-6 col-sm-12 ml-0 leftDiv">
-                        <hr>
-                        <!-- <span class="arrow">&#8702;</span> -->
-                    </div>
-                    <div class="col-md-6 col-sm-12 rightDiv">
-                        <h1>Gallery</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                        </p>
-                    </div>
+    <div id="gallery">
+        <div class="container-fluid">
+            <div class="row g-5">
+                <div class="col-md-6 col-sm-12 ml-0 leftDiv">
+                    <hr>
+                    <!-- <span class="arrow">&#8702;</span> -->
+                </div>
+                <div class="col-md-6 col-sm-12 rightDiv">
+                    <h1>Gallery</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
                 </div>
             </div>
+        </div>
+        <div class="container-fluid">
+
             <div class="cont">
                 <div class="panel active"
                     style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
@@ -112,41 +118,48 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div id="ameneties">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
+    <div id="ease">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 leftDiv">
+                    <div class="container">
+
                         <h1>Ease of Connectivity</h1>
-                        <p>The location is a perfect connector to both city and highway. It is well connected to hospitals, offices, schools and other residences.. to sum up in one sentence can be described as the 'heart of the city' . Express less time commuting and more time with your loved ones in your own home!</p>
+                        <p>The location is a perfect connector to both city and highway. It is well connected to
+                            hospitals,
+                            offices, schools and other residences.. to sum up in one sentence can be described as the
+                            'heart
+                            of the city' . Express less time commuting and more time with your loved ones in your own
+                            home!
+                        </p>
                         <p>Elevate your life and savour the joys!</p>
-
-                        <button>KNOW MORE</button>
+                        <button class="easeBtn">KNOW MORE</button>
                     </div>
-                    <div class="col-md-6 col-sm-12 rightDiv">
-                        <img src="./Image 25@2x.png" alt="Ease of Connectivity">
-                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 rightDiv" id="map">
                 </div>
             </div>
         </div>
-
-        <div class="hello" id="features">Fourth heading</div>
-        <div class="hello" id="floorPlans">Fifth heading</div>
-        <div class="hello" id="contactUs">Fifth heading</div>
     </div>
+
+    
+    <!-- Map  -->
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYXZzLXRlY2giLCJhIjoiY2wwYXBua2tlMDM3bzNjdDNhbnZmNHowaiJ9.JUqju0fy33Uykj4MtMvbew';
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [ 91.80261571089979, 26.176276479664597 ], // starting position [lng, lat]
+            zoom: 12, // starting zoom
+        });
+
+        const marker1 = new mapboxgl.Marker({ color: 'black', rotation: 0 })
+            .setLngLat([91.80128032595606, 26.17748580569402])
+            .addTo(map);
+    </script>
+
 </body>
-
-<script>
-    window.onscroll = function () { scrollFunction() };
-    function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-
-            document.getElementById("navbarScroll").style.background = "#18181e90";
-        } else {
-
-            document.getElementById("navbarScroll").style.background = "none";
-        }
-    }
-</script>
 
 </html>

@@ -1,3 +1,5 @@
+@import "./fonts.css";
+
 :root{
     --text: #FFFFFF;
     --primary: #ECE3DD;
@@ -13,8 +15,10 @@ html{
 }
 
 body{
-    position: relative;
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 /* 
@@ -25,9 +29,11 @@ body{
 
 #navBar .navbar{
     height: 13vh;
+    background-color: transparent;
 }
 
 #navBar .navbar-brand img{
+    margin-top: 100px;
     width: 8em;
 }
 
@@ -53,15 +59,31 @@ body{
     color: var(--text);
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+#navBar .nav_links a:hover {
     /* color: #fff; */
     background-color: transparent;
     border-radius: 0;
-    border-bottom: 2px solid #B46325;
+    /* border-bottom: 2px solid #B46325; */
+    font-weight: 700;
 }
 
 #navBar .nav_links a.active{
     font-weight: bold;
+}
+
+#navBar .nav_links .brochure{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-left: 1.2rem;
+
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 7px;
+    padding: 10px 22px;
+    
+    border: none;
+    outline: none;
 }
 
 /* 
@@ -81,10 +103,12 @@ body{
     justify-content: left;
     align-items: center;
     z-index: -1;
+
+    margin-top: -13vh;
 }
 
 #home h1{
-    margin-top: 45vh;
+    margin-top: 50vh;
 
     font-size: 1.7rem;
     font-family: 'Poppins', sans-serif;
@@ -92,6 +116,12 @@ body{
     color: var(--text);
     margin-bottom: 1.5rem;
     z-index: 2;
+}
+
+#home .home_heading{
+    font-family: VentureHandmade, 'Poppins';
+    font-size: 2.5rem;
+    font-weight: 400;
 }
 
 #home p{
@@ -103,7 +133,7 @@ body{
     z-index: 2;
 }
 
-#home button{
+#home .know{
     font-size: 0.8rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -114,13 +144,27 @@ body{
     border-radius: 5px;
 
     outline: none;
-    /* focus */
 }
 
-#home button:hover{
+#home .know:hover{
     color: var(--secondary);
     background-color: var(--primary);
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--primary);
+}
+
+#home .brochure{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-right: 1.2rem;
+
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 5px;
+    padding: 10px 22px;
+    
+    border: none;
+    outline: none;
 }
 
 /* 
@@ -166,7 +210,8 @@ body{
 
 .cont {
     display: flex;
-    width: 90vw;
+    width: 100%;
+    padding: 1rem 0rem 5rem 0rem;
   }
 
 .panel {
@@ -174,7 +219,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     height: 60vh;
-    border-radius: 10px;
+    border-radius: 8px;
     color: #fff;
     cursor: pointer;
     flex: 1;
@@ -219,10 +264,59 @@ body{
    ################################  
 */
 
-#amenities{
-    height: 100vh;
+#ease{
+    height: 100%;
 }
 
-#amenities .rightDiv img{
-    height: 100vh;
+#ease .leftDiv{
+    padding: 3rem 5rem;
+    background-color: var(--heading);
+    color: var(--text);
+
+    height: 80vh;
+}
+
+#ease .leftDiv h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--text);
+
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#ease .leftDiv p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--text);
+    opacity: 0.75;
+
+    font-size: 0.9rem;
+    /* width: %; */
+    margin-bottom: 1.5rem;
+}
+
+#ease .leftDiv .easeBtn{
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    background-color: transparent;
+    border: 2px solid var(--text);
+    border-radius: 5px;
+
+    outline: none;
+}
+
+#ease .leftDiv .easeBtn:hover{
+    color: var(--secondary);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+#ease #map{
+    height: 80vh;
+    /* width: 100%; */
 }
