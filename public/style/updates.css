@@ -1,0 +1,209 @@
+@import "./fonts.css";
+
+:root{
+    --text: #FFFFFF;
+    --primary: #ECE3DD;
+    --primary2: #EBE4DE;
+    --secondary: #B46325;
+    --secondary2: #4A0000;
+    --secondary3: #402511;
+    --heading: #18181E;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 
+   ################################
+   ################# Navbar 
+   ################################  
+*/
+
+#navBar .navbar{
+    height: 13vh;
+    background-color: transparent;
+}
+
+#navBar .navbar-brand img{
+    margin-top: 100px;
+    width: 8em;
+}
+
+#navBar .navbar>.container{
+    /* border-bottom: 1px solid #b2b1b1; */
+    padding: 20px 0;
+}
+
+#navBar .nav_links{
+    width: auto;
+    padding-right: 10px;
+}
+
+#navBar .nav_links a{
+    /* padding-left: 80px;  */
+    margin-left: 1.2rem;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    overflow: hidden;
+    white-space : nowrap;
+    color: var(--text);
+}
+
+#navBar .nav_links a:hover {
+    /* color: #fff; */
+    background-color: transparent;
+    border-radius: 0;
+    /* border-bottom: 2px solid #B46325; */
+    font-weight: 700;
+}
+
+#navBar .nav_links a.active{
+    font-weight: bold;
+}
+
+#navBar .nav_links .brochure{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-left: 1.2rem;
+
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 7px;
+    padding: 10px 22px;
+    
+    border: none;
+    outline: none;
+}
+
+
+/* 
+   ################################
+   ################# Home 
+   ################################  
+*/
+
+#home{
+    display: flex;
+    background-image: url("../images/home1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+    z-index: -1;
+
+    margin-top: -13vh;
+
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+}
+
+#home .home_content{
+    position: absolute;
+    bottom: 1.5rem;
+    /* right: ; */
+}
+
+#home h1{
+    /* margin-top: 28vh; */
+
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1rem;
+    z-index: 2;
+}
+
+#home p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    width: 45%;
+    z-index: 2;
+}
+
+/* 
+   ################################
+   ################# Updates
+   ################################  
+*/
+
+#updates{
+    height: 100%;
+    padding: 4rem 0;
+    background-color: #F8F8F8;
+}
+
+#updates h1{
+    /* margin-top: 28vh; */
+
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--heading);
+    margin-bottom: 1rem;
+}
+
+#updates p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--heading);
+    margin-bottom: 3rem;
+    z-index: 2;
+}
+
+#updates .updateList h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#updates .updateList .card-body{
+    padding: 1rem 1.2rem;
+    background-color: var(--primary2);
+    border: none;
+    border-radius: 8px;
+}
+/* 
+#updates .updateList .card-body:hover{
+    background-color: var(--heading);
+} */
+
+#updates .updateList .card-body .card-title{
+    /* padd */
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading);
+    margin-bottom: 0.5rem;
+}
+
+#updates .updateList .card-body .card-date{
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: #18181E;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+#updates .updateList .card-body .card-text{
+    /* padd */
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--heading);
+    margin-bottom: 0.5rem;
+}
